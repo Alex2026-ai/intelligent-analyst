@@ -559,7 +559,7 @@ def build_evidence_certificate(
     story.append(Paragraph(
         f"This certificate was cryptographically signed by {SYSTEM_NAME} v{SYSTEM_VERSION} "
         f"using Google Cloud KMS (ECDSA P-256). Verify signature at: "
-        f"<font face='Courier' size='6'>api.intelligentanalyst.ai/verify/{batch_id}</font>",
+        f"<font face='Courier' size='6'>api.intelligentanalyst.io/verify/{batch_id}</font>",
         styles['FooterText']
     ))
     story.append(Paragraph(
