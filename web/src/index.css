@@ -1,0 +1,379 @@
+@import "tailwindcss";
+
+/* ===== Forensic Enterprise Design System ===== */
+/* Infrastructure-grade, not SaaS-friendly */
+
+:root {
+  --forensic-bg: #050b14;
+  --forensic-surface: #0a1018;
+  --forensic-border: #1c2538;
+  --forensic-accent: #0ea5cc;
+  --forensic-success: #10b981;
+  --forensic-text: #eaf0f6;
+  --forensic-muted: #7c8da0;
+  --forensic-glow: rgba(14, 165, 204, 0.4);
+  --grid-color: rgba(28, 37, 56, 0.5);
+}
+
+html, body {
+  background-color: var(--forensic-bg);
+  color: var(--forensic-text);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+input, textarea, button, select {
+  font-family: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code, pre, .font-mono {
+  font-family: "JetBrains Mono", "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* ===== HARD GEOMETRY - No rounded corners ===== */
+* {
+  border-color: var(--forensic-border);
+  border-radius: 0 !important;
+}
+
+/* Override any Tailwind rounded classes */
+.rounded, .rounded-sm, .rounded-md, .rounded-lg, .rounded-xl, .rounded-2xl, .rounded-3xl, .rounded-full {
+  border-radius: 0 !important;
+}
+
+::selection {
+  background-color: var(--forensic-accent);
+  color: white;
+}
+
+/* ===== Monospaced Technical Labels ===== */
+.font-mono,
+[data-technical],
+.technical-label {
+  font-family: "JetBrains Mono", "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  letter-spacing: -0.02em;
+}
+
+/* ===== Sharp Corner ActionBlock ===== */
+.action-block {
+  border-radius: 0 !important;
+  border: 1px solid var(--forensic-border);
+  transition: all 0.2s ease;
+}
+
+.action-block:hover {
+  border-color: var(--forensic-accent);
+  box-shadow: 0 0 0 1px var(--forensic-accent);
+}
+
+/* ===== Forensic Badge ===== */
+.forensic-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(8, 145, 178, 0.1);
+  border: 1px solid rgba(8, 145, 178, 0.3);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 0 !important;
+}
+
+/* ===== Hash/Signature Display ===== */
+.hash-display {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  background: rgba(15, 23, 42, 0.8);
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--forensic-border);
+  word-break: break-all;
+  color: var(--forensic-muted);
+}
+
+/* ===== LED/Ledger Numbers (Silent Tax) ===== */
+.ledger-number {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-shadow: 0 0 20px currentColor;
+}
+
+/* ===== Blueprint Grid Background ===== */
+.blueprint-grid {
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: -1px -1px;
+}
+
+.blueprint-grid-large {
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(rgba(30, 41, 59, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 41, 59, 0.3) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+}
+
+/* ===== Security Terminal Styling ===== */
+.terminal-frame {
+  background: linear-gradient(180deg, #0a0f1a 0%, #020617 100%);
+  border: 1px solid var(--forensic-border);
+  position: relative;
+}
+
+.terminal-frame::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 32px;
+  background: linear-gradient(180deg, rgba(30, 41, 59, 0.5) 0%, transparent 100%);
+  border-bottom: 1px solid var(--forensic-border);
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--forensic-muted);
+}
+
+.terminal-header::before {
+  content: '>';
+  color: var(--forensic-accent);
+}
+
+/* Terminal Glow Button */
+.terminal-button {
+  position: relative;
+  background: linear-gradient(180deg, #0e7490 0%, #0891b2 100%);
+  border: 1px solid #22d3ee;
+  color: white;
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+}
+
+.terminal-button::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: var(--forensic-glow);
+  filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.terminal-button:hover::after {
+  opacity: 1;
+}
+
+.terminal-button:hover {
+  box-shadow: 0 0 20px var(--forensic-glow), inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+/* ===== Cryptographic Handshake Animation ===== */
+@keyframes hashFlicker {
+  0%, 100% { opacity: 1; }
+  10% { opacity: 0.3; }
+  20% { opacity: 0.8; }
+  30% { opacity: 0.4; }
+  40% { opacity: 0.9; }
+  50% { opacity: 0.2; }
+  60% { opacity: 0.7; }
+  70% { opacity: 0.5; }
+  80% { opacity: 0.9; }
+  90% { opacity: 0.3; }
+}
+
+.hash-flicker {
+  animation: hashFlicker 0.8s ease-in-out;
+}
+
+@keyframes scanLine {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(100%); opacity: 0; }
+}
+
+.scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--forensic-accent), transparent);
+  box-shadow: 0 0 10px var(--forensic-accent);
+  animation: scanLine 1.5s ease-in-out infinite;
+}
+
+/* ===== Waterfall Gate Styling ===== */
+.waterfall-gate {
+  position: relative;
+  padding: 2rem;
+  border-left: 2px solid var(--forensic-border);
+}
+
+.waterfall-gate::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  background: var(--forensic-border);
+  transform: translateY(-50%);
+}
+
+.waterfall-gate.active {
+  border-left-color: var(--forensic-accent);
+}
+
+.waterfall-gate.active::before {
+  background: var(--forensic-accent);
+  box-shadow: 0 0 12px var(--forensic-accent);
+}
+
+/* Scanning laser for active gate - HIGHLY VISIBLE */
+.gate-scanner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #0891b2 30%, #22d3ee 50%, #0891b2 70%, transparent 100%);
+  box-shadow: 0 0 12px #0891b2, 0 0 24px #0891b2;
+  animation: gateScan 2s ease-in-out infinite;
+  z-index: 10;
+}
+
+@keyframes gateScan {
+  0% { top: 0; opacity: 0.6; }
+  50% { top: calc(100% - 2px); opacity: 1; }
+  100% { top: 0; opacity: 0.6; }
+}
+
+/* Stamp animation for L4 - NOTARIZATION SEAL */
+@keyframes stampSeal {
+  0% {
+    transform: scale(2) rotate(-20deg);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1.2) rotate(-8deg);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(0.95) rotate(2deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.stamp-seal {
+  animation: stampSeal 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Stamp glow effect */
+.stamp-seal > div {
+  box-shadow: 0 0 20px currentColor, inset 0 0 10px currentColor;
+}
+
+/* ===== Layer Indicator Colors ===== */
+.layer-l1 { color: #22c55e; }
+.layer-l2 { color: #3b82f6; }
+.layer-l3 { color: #f59e0b; }
+.layer-l4 { color: #0891b2; }
+
+/* ===== Reduced Motion Support ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .scan-line,
+  .gate-scanner {
+    display: none;
+  }
+}
+
+/* ===== Scroll-driven Animation Base ===== */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Data Table Styling (Infrastructure look) ===== */
+.data-table {
+  border-collapse: collapse;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+}
+
+.data-table th {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid var(--forensic-border);
+  padding: 0.5rem 1rem;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  color: var(--forensic-muted);
+}
+
+.data-table td {
+  border: 1px solid var(--forensic-border);
+  padding: 0.5rem 1rem;
+}
+
+/* ===== Status Indicators ===== */
+.status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-indicator::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: currentColor;
+}
+
+.status-indicator.valid { color: var(--forensic-success); }
+.status-indicator.invalid { color: #ef4444; }
+.status-indicator.pending { color: #f59e0b; }

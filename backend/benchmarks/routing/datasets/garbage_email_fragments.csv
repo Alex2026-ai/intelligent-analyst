@@ -1,0 +1,11 @@
+Fragment,Type,Complete
+john@,Incomplete,No
+@example.com,Incomplete,No
+user@domain.c,Incomplete,No
+someone+tag@domain,Valid+Tag,Yes
+test@co.,Incomplete,No
+admin@localhost,Local,Yes
+name@192.168.1.1,IP-based,Yes
+@twitter,Incomplete,No
+user.name@co,Incomplete,No
+test@sub.domain.co,Valid,Yes

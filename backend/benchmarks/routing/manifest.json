@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "created": "2026-03-15",
+  "description": "Routing benchmark v2 \u2014 expanded suite with 100+ test cases covering adversarial/edge-case scenarios",
+  "categories": [
+    "person",
+    "org",
+    "garbage",
+    "mixed",
+    "edge_cases"
+  ],
+  "total_files": 86,
+  "expected_results_file": "expected_results.json",
+  "notes": "Includes 15 person adversarial, 15 org adversarial, 15 garbage, 15 mixed, 10 edge format cases. All files contain 2-50 realistic data rows. See expected_results.json for routing expectations."
+}

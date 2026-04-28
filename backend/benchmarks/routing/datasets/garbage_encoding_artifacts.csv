@@ -1,0 +1,11 @@
+Text,Detected_Encoding,Status
+Testo corrotto,UTF8 as Latin1,Corrupt
+Doppio encoding,UTF8 as Latin1,Corrupt
+Caractere,UTF8 as Latin1,Corrupt
+Diacritici dannati,UTF8 as Latin1,Corrupt
+Test simboli,UTF8 as Latin1,Corrupt
+Spazi strani,UTF8 as Latin1,Corrupt
+Apici cattivi,UTF8 as Latin1,Corrupt
+Linee danneggiate,UTF8 as Latin1,Corrupt
+Tilde rotta,UTF8 as Latin1,Corrupt
+Frecce divertenti,UTF8 as Latin1,Corrupt

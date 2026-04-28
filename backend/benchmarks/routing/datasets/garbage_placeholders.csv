@@ -1,0 +1,11 @@
+data,value,reference,status
+N/A,null,placeholder,unknown
+NULL,,TBD,pending
+none,#N/A,N/A,inactive
+--,---,---,---
+undefined,missing,unknown,pending
+empty,blank,null,N/A
+test,sample,demo,todo
+TBD,TBD,TBD,TBD
+[EMPTY],<missing>,***,???
+REDACTED,REDACTED,REDACTED,REDACTED

@@ -1,0 +1,11 @@
+Encoded,Decode_Attempt,Likely
+SGVsbG8gV29ybGQ=,Hello World,Text
+YWRtaW46cGFzc3dvcmQ=,admin:password,Creds
+L2V0Yy9wYXNzd2Q=,/etc/passwd,Path
+c3FsaW5qZWN0aW9u,sqlinjection,Malware
+ZmlsZTovL2hvbWU=,file://home,Path
+aHR0cDovL2V2aWwuY29t,http://evil.com,URL
+Y21kLmV4ZQ==,cmd.exe,Executable
+UG93ZXJTaGVsbA==,PowerShell,Tool
+QmFzaCBSZXZlcnNlIFNoZWxs,Bash Reverse Shell,Malware
+c2ggLWkgPiYgL2Rldi90Y3A=,sh -i >& /dev/tcp,Malware

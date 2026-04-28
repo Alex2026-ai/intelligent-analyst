@@ -1,0 +1,3 @@
+# Sanctions data (TEST only - not committed)
+*.csv
+!.gitignore

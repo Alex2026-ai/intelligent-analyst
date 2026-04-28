@@ -1,0 +1,43 @@
+# Trust Assertion Policy v1
+# Protocol: ia-attestation/v1
+# Status: ACTIVE
+# Immutable once deployed — new versions only.
+
+version: "1.0"
+protocol: "ia-attestation/v1"
+status: "active"
+
+# Required verification checks for an assertion to pass.
+# All listed checks must be present in the receipt's checks_passed list.
+required_checks:
+  - signature
+  - anchor_binding
+  - artifact_integrity
+  - schema_jcs
+
+# Maximum age of a receipt (seconds) for it to be considered valid.
+# Receipts older than this are rejected with RECEIPT_EXPIRED.
+max_receipt_age_seconds: 86400  # 24 hours
+
+# Context validation rules
+context:
+  required_fields:
+    - system
+    - action
+    - resource_id
+    - correlation_id
+  max_field_length: 256
+  allowed_systems: []  # empty = allow all (enforced at deployment)
+  allowed_actions: []  # empty = allow all
+
+# Rate limiting (per-endpoint, supplements global rate limiter)
+rate_limits:
+  per_ip:
+    limit: 100
+    window_seconds: 60
+  per_receipt_id:
+    limit: 10
+    window_seconds: 60
+
+# Failure behavior
+fail_closed: true  # deny on internal errors

@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Build output
+lib/
+
+# Firebase
+firebase-debug.log
+firebase-debug.*.log
+*.local
+
+# IDE
+.idea/
+.vscode/

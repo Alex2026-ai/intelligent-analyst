@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#0f172a"/>
+
+  <!-- Card -->
+  <rect x="50" y="40" width="500" height="320" rx="8" fill="#1e293b"/>
+
+  <!-- Header -->
+  <text x="300" y="80" font-family="system-ui" font-size="16" fill="#e2e8f0" text-anchor="middle" font-weight="600">Public Verification</text>
+  <text x="300" y="100" font-family="monospace" font-size="11" fill="#64748b" text-anchor="middle">BATCH-A7F2E9C1</text>
+
+  <!-- Status indicator -->
+  <rect x="200" y="120" width="200" height="48" rx="4" fill="#065f46"/>
+  <text x="300" y="150" font-family="system-ui" font-size="18" fill="#34d399" text-anchor="middle" font-weight="bold">VERIFIED</text>
+
+  <!-- Verification checklist -->
+  <g transform="translate(100, 190)">
+    <!-- Hash Chain -->
+    <rect width="400" height="44" rx="4" fill="#0f172a"/>
+    <circle cx="24" cy="22" r="10" fill="#065f46"/>
+    <text x="24" y="26" font-family="system-ui" font-size="12" fill="#34d399" text-anchor="middle">✓</text>
+    <text x="50" y="20" font-family="system-ui" font-size="12" fill="#e2e8f0">Hash Chain</text>
+    <text x="50" y="36" font-family="monospace" font-size="10" fill="#64748b">All 47,832 records linked • No breaks detected</text>
+    <text x="380" y="26" font-family="monospace" font-size="10" fill="#34d399">VALID</text>
+
+    <!-- Signature -->
+    <rect y="52" width="400" height="44" rx="4" fill="#0f172a"/>
+    <circle cx="24" cy="74" r="10" fill="#065f46"/>
+    <text x="24" y="78" font-family="system-ui" font-size="12" fill="#34d399" text-anchor="middle">✓</text>
+    <text x="50" y="72" font-family="system-ui" font-size="12" fill="#e2e8f0">Digital Signature</text>
+    <text x="50" y="88" font-family="monospace" font-size="10" fill="#64748b">ECDSA P-256 • Cloud KMS verified</text>
+    <text x="380" y="78" font-family="monospace" font-size="10" fill="#34d399">VALID</text>
+
+    <!-- Anchor -->
+    <rect y="104" width="400" height="44" rx="4" fill="#0f172a"/>
+    <circle cx="24" cy="126" r="10" fill="#065f46"/>
+    <text x="24" y="130" font-family="system-ui" font-size="12" fill="#34d399" text-anchor="middle">✓</text>
+    <text x="50" y="124" font-family="system-ui" font-size="12" fill="#e2e8f0">External Anchor</text>
+    <text x="50" y="140" font-family="monospace" font-size="10" fill="#64748b">GCS immutable storage • Write timestamp confirmed</text>
+    <text x="380" y="130" font-family="monospace" font-size="10" fill="#34d399">CONFIRMED</text>
+  </g>
+</svg>

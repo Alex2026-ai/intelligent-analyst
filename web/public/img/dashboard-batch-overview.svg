@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#0f172a"/>
+
+  <!-- Header bar -->
+  <rect x="0" y="0" width="800" height="48" fill="#1e293b"/>
+  <rect x="20" y="16" width="120" height="16" rx="2" fill="#334155"/>
+  <circle cx="760" cy="24" r="12" fill="#334155"/>
+
+  <!-- Sidebar -->
+  <rect x="0" y="48" width="200" height="452" fill="#1e293b"/>
+  <rect x="16" y="72" width="168" height="32" rx="4" fill="#0891b2" opacity="0.2"/>
+  <rect x="32" y="80" width="80" height="16" rx="2" fill="#06b6d4"/>
+  <rect x="16" y="120" width="168" height="24" rx="2" fill="#334155"/>
+  <rect x="16" y="152" width="168" height="24" rx="2" fill="#334155"/>
+  <rect x="16" y="184" width="168" height="24" rx="2" fill="#334155"/>
+
+  <!-- Main content area -->
+  <rect x="220" y="68" width="560" height="412" fill="#1e293b" rx="8"/>
+
+  <!-- Batch header -->
+  <rect x="240" y="88" width="200" height="24" rx="2" fill="#e2e8f0"/>
+  <rect x="240" y="120" width="300" height="12" rx="2" fill="#475569"/>
+
+  <!-- Status badge -->
+  <rect x="680" y="88" width="80" height="28" rx="4" fill="#065f46"/>
+  <text x="720" y="107" font-family="system-ui" font-size="12" fill="#34d399" text-anchor="middle">COMPLETED</text>
+
+  <!-- Stats row -->
+  <g transform="translate(240, 160)">
+    <rect width="120" height="80" rx="4" fill="#0f172a"/>
+    <text x="12" y="24" font-family="monospace" font-size="10" fill="#64748b">TOTAL ROWS</text>
+    <text x="12" y="56" font-family="monospace" font-size="24" fill="#e2e8f0">47,832</text>
+
+    <rect x="140" width="120" height="80" rx="4" fill="#0f172a"/>
+    <text x="152" y="24" font-family="monospace" font-size="10" fill="#64748b">RESOLVED</text>
+    <text x="152" y="56" font-family="monospace" font-size="24" fill="#06b6d4">46,891</text>
+
+    <rect x="280" width="120" height="80" rx="4" fill="#0f172a"/>
+    <text x="292" y="24" font-family="monospace" font-size="10" fill="#64748b">L4 REVIEW</text>
+    <text x="292" y="56" font-family="monospace" font-size="24" fill="#f59e0b">941</text>
+
+    <rect x="420" width="100" height="80" rx="4" fill="#0f172a"/>
+    <text x="432" y="24" font-family="monospace" font-size="10" fill="#64748b">SIGNED</text>
+    <text x="470" y="56" font-family="system-ui" font-size="20" fill="#34d399">✓</text>
+  </g>
+
+  <!-- Layer breakdown -->
+  <rect x="240" y="260" width="520" height="200" rx="4" fill="#0f172a"/>
+  <text x="260" y="288" font-family="system-ui" font-size="12" fill="#94a3b8">LAYER DISTRIBUTION</text>
+
+  <!-- Bar chart -->
+  <g transform="translate(260, 310)">
+    <rect y="0" width="380" height="24" rx="2" fill="#1e293b"/>
+    <rect y="0" width="320" height="24" rx="2" fill="#06b6d4"/>
+    <text x="8" y="17" font-family="monospace" font-size="11" fill="#0f172a">L1 Deterministic — 67%</text>
+
+    <rect y="32" width="380" height="24" rx="2" fill="#1e293b"/>
+    <rect y="32" width="95" height="24" rx="2" fill="#0891b2"/>
+    <text x="8" y="49" font-family="monospace" font-size="11" fill="#fff">L2 Vector — 25%</text>
+
+    <rect y="64" width="380" height="24" rx="2" fill="#1e293b"/>
+    <rect y="64" width="23" height="24" rx="2" fill="#0e7490"/>
+    <text x="32" y="81" font-family="monospace" font-size="11" fill="#94a3b8">L3 LLM — 6%</text>
+
+    <rect y="96" width="380" height="24" rx="2" fill="#1e293b"/>
+    <rect y="96" width="8" height="24" rx="2" fill="#f59e0b"/>
+    <text x="16" y="113" font-family="monospace" font-size="11" fill="#94a3b8">L4 Human — 2%</text>
+  </g>
+</svg>

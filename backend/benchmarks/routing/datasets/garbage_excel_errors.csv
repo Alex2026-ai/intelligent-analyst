@@ -1,0 +1,11 @@
+Cell_Value,Error_Type,Severity
+#REF!,Reference Error,High
+#VALUE!,Value Error,High
+#DIV/0!,Division Error,High
+#NAME?,Name Error,High
+#N/A,Not Available,High
+#NULL!,Null Error,Medium
+#NUM!,Number Error,High
+Err:502,Calc Error,Medium
+Err:504,Parameter Error,Medium
+#SPILL!,Spill Error,Medium

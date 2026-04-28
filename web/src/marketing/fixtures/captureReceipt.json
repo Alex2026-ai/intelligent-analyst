@@ -1,0 +1,40 @@
+{
+  "evidence_blob": {
+    "trace_id": "BATCH-A7F2E9C1",
+    "record_index": 12847,
+    "timestamp": "2026-02-17T14:38:42Z",
+    "input": {
+      "raw": "ACME CORP HOLDINGS LLC",
+      "normalized": "acme corp holdings"
+    },
+    "resolution": {
+      "layer": "L1_DETERMINISTIC",
+      "canonical_id": "CAN-00847",
+      "canonical_name": "ACME CORPORATION",
+      "confidence": 1.0,
+      "method": "EXACT_ALIAS_MATCH"
+    },
+    "signature": {
+      "valid": true,
+      "algorithm": "ECDSA_P256",
+      "key_id": "projects/example-project/locations/us/keyRings/forensic/cryptoKeys/signing/cryptoKeyVersions/1"
+    },
+    "hash_chain": {
+      "previous": "sha256:8f7e6d5c4b3a2f1e0d9c8b7a6f5e4d3c2b1a0f9e",
+      "current": "sha256:9f8e7d6c5b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0e"
+    },
+    "anchor_status": "CONFIRMED"
+  },
+  "certificate": {
+    "title": "FORENSIC EVIDENCE CERTIFICATE",
+    "issuer": "Intelligent Analyst Enterprise",
+    "batch_id": "BATCH-A7F2E9C1",
+    "records_processed": 47832,
+    "processing_date": "2026-02-17",
+    "attestation": {
+      "signature_algorithm": "ECDSA P-256 / Cloud KMS",
+      "hash_chain": "sha256:9f8e7d6c5b4a3f2e1d0c...",
+      "verification_status": "VERIFIED"
+    }
+  }
+}

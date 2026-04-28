@@ -1,0 +1,11 @@
+Timestamp,Format,Type
+2026-03-15T14:30:00Z,ISO 8601,DateTime
+03/15/2026 14:30,US Date,DateTime
+15.03.2026 14:30:00,EU Date,DateTime
+14:30:00,Time Only,Time
+2026-W11-3,ISO Week,Week
+2026-74,Day of Year,Date
+P3Y6M4DT12H30M5S,ISO Duration,Duration
+Mar 15 2026,Text Date,Date
+1742276400,Unix Epoch,DateTime
+2026-Q1,Quarter,Date

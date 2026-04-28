@@ -1,0 +1,48 @@
+rules_version = '2';
+
+// IMPORTANT: Before deploying, verify this doesn't override existing rules.
+// Check Firebase Console > Firestore > Rules for current ruleset.
+// This file ONLY adds the leads collection for marketing form submissions.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ============================================================
+    // LEADS COLLECTION - Marketing form submissions
+    // Allows unauthenticated create only (no read/update/delete)
+    // ============================================================
+    match /leads/{leadId} {
+      allow create: if
+        // Required fields must be present and non-empty
+        request.resource.data.firstName is string &&
+        request.resource.data.firstName.size() > 0 &&
+        request.resource.data.firstName.size() < 100 &&
+        request.resource.data.lastName is string &&
+        request.resource.data.lastName.size() > 0 &&
+        request.resource.data.lastName.size() < 100 &&
+        request.resource.data.email is string &&
+        request.resource.data.email.matches('.*@.*\\..*') &&
+        request.resource.data.email.size() < 255 &&
+        request.resource.data.company is string &&
+        request.resource.data.company.size() > 0 &&
+        request.resource.data.company.size() < 200 &&
+        request.resource.data.useCase is string &&
+        request.resource.data.useCase.size() > 0 &&
+        // Source must be valid
+        request.resource.data.source in ['request-demo', 'forensic-audit', 'contact'] &&
+        // Prevent client from setting arbitrary status
+        request.resource.data.status == 'new';
+
+      // No read, update, or delete from client
+      allow read, update, delete: if false;
+    }
+
+    // ============================================================
+    // ALL OTHER COLLECTIONS - Require authentication
+    // This preserves dashboard functionality for batches, etc.
+    // ============================================================
+    match /{document=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}

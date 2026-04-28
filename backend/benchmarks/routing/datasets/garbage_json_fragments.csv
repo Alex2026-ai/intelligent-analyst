@@ -1,0 +1,11 @@
+Fragment,Type,Valid
+"{""key"": ""value"", ""array"": [1, 2,",JSON,No
+<root><child>text</child>,XML,No
+"{""incomplete"": true",JSON,No
+<tag attr=val>,XML,No
+"[{""id"": 1}, {""id"": 2}",JSON Array,No
+<?xml version=1.0?>,XML,Yes
+"{""nested"": {""deep"": ""value""",JSON,No
+<parent><child1/><child2/>,XML,No
+"[""item1"", ""item2"", ",JSON Array,No
+<![CDATA[content]]>,XML,Yes

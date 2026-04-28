@@ -1,0 +1,776 @@
+{
+  "edge_all_empty.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "edge_cases",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "edge_bom_utf8.csv": {
+    "effective_mode": "company",
+    "dataset_type": "COMPANY",
+    "routing_decision": "ml_classifier_org",
+    "category": "edge_cases",
+    "expected_effective_mode": "company",
+    "expected_dataset_type": "COMPANY",
+    "expected_routing_decision": "ml_classifier_org"
+  },
+  "edge_crlf_line_endings.csv": {
+    "effective_mode": "company",
+    "dataset_type": "COMPANY",
+    "routing_decision": "ml_classifier_org",
+    "category": "edge_cases",
+    "expected_effective_mode": "company",
+    "expected_dataset_type": "COMPANY",
+    "expected_routing_decision": "ml_classifier_org"
+  },
+  "edge_header_only.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "UNKNOWN",
+    "routing_decision": "empty_dataset",
+    "category": "edge_cases",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "UNKNOWN",
+    "expected_routing_decision": "empty_dataset"
+  },
+  "edge_huge_cells.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "edge_cases",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "edge_inconsistent_columns.csv": {
+    "effective_mode": "company",
+    "dataset_type": "COMPANY",
+    "routing_decision": "ml_classifier_org",
+    "category": "edge_cases",
+    "expected_effective_mode": "company",
+    "expected_dataset_type": "COMPANY",
+    "expected_routing_decision": "ml_classifier_org"
+  },
+  "edge_latin1_encoding.csv": {
+    "effective_mode": "company",
+    "dataset_type": "COMPANY",
+    "routing_decision": "ml_classifier_org",
+    "category": "edge_cases",
+    "expected_effective_mode": "company",
+    "expected_dataset_type": "COMPANY",
+    "expected_routing_decision": "ml_classifier_org"
+  },
+  "edge_numeric_headers.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "edge_cases",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "edge_ocr_damaged.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "edge_cases",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "edge_single_column_no_header.csv": {
+    "effective_mode": "company",
+    "dataset_type": "COMPANY",
+    "routing_decision": "ml_classifier_org",
+    "category": "edge_cases",
+    "expected_effective_mode": "company",
+    "expected_dataset_type": "COMPANY",
+    "expected_routing_decision": "ml_classifier_org"
+  },
+  "edge_trailing_commas.csv": {
+    "effective_mode": "company",
+    "dataset_type": "COMPANY",
+    "routing_decision": "ml_classifier_org",
+    "category": "edge_cases",
+    "expected_effective_mode": "company",
+    "expected_dataset_type": "COMPANY",
+    "expected_routing_decision": "ml_classifier_org"
+  },
+  "edge_unicode_special.csv": {
+    "effective_mode": "company",
+    "dataset_type": "COMPANY",
+    "routing_decision": "company_dataset",
+    "category": "edge_cases",
+    "expected_effective_mode": "company",
+    "expected_dataset_type": "COMPANY",
+    "expected_routing_decision": "company_dataset"
+  },
+  "edge_windows1252.csv": {
+    "effective_mode": "company",
+    "dataset_type": "COMPANY",
+    "routing_decision": "ml_classifier_org",
+    "category": "edge_cases",
+    "expected_effective_mode": "company",
+    "expected_dataset_type": "COMPANY",
+    "expected_routing_decision": "ml_classifier_org"
+  },
+  "garbage_base64.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "garbage",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "garbage_email_fragments.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "garbage",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "garbage_encoding_artifacts.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "garbage",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "garbage_excel_errors.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "garbage",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "garbage_file_references.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "garbage",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "garbage_html_fragments.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "garbage",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "garbage_injection_attempts.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "garbage",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "garbage_json_fragments.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "garbage",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "garbage_multilingual_placeholders.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "garbage",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "garbage_numeric_formats.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "garbage",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "garbage_numeric_only.csv": {
+    "effective_mode": "reject",
+    "dataset_type": "INVALID",
+    "routing_decision": "invalid_dataset",
+    "category": "garbage",
+    "expected_effective_mode": "reject",
+    "expected_dataset_type": "INVALID",
+    "expected_routing_decision": "invalid_dataset"
+  },
+  "garbage_placeholders.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "garbage",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "garbage_repeated_chars.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "garbage",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "garbage_short_codes.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "garbage",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "garbage_sql_injection.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "garbage",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "garbage_timestamps.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "garbage",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "garbage_unicode_noise.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "garbage",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "mixed_ambiguous_single.csv": {
+    "effective_mode": "company",
+    "dataset_type": "COMPANY",
+    "routing_decision": "company_dataset",
+    "category": "mixed",
+    "expected_effective_mode": "company",
+    "expected_dataset_type": "COMPANY",
+    "expected_routing_decision": "company_dataset"
+  },
+  "mixed_crm_export.csv": {
+    "effective_mode": "company",
+    "dataset_type": "COMPANY",
+    "routing_decision": "ml_classifier_org",
+    "category": "mixed",
+    "expected_effective_mode": "company",
+    "expected_dataset_type": "COMPANY",
+    "expected_routing_decision": "ml_classifier_org"
+  },
+  "mixed_crm_wide.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "PERSON",
+    "routing_decision": "person_dataset",
+    "category": "mixed",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "PERSON",
+    "expected_routing_decision": "person_dataset"
+  },
+  "mixed_duplicate_heavy.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "mixed",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "mixed_empty_columns.csv": {
+    "effective_mode": "company",
+    "dataset_type": "COMPANY",
+    "routing_decision": "ml_classifier_org",
+    "category": "mixed",
+    "expected_effective_mode": "company",
+    "expected_dataset_type": "COMPANY",
+    "expected_routing_decision": "ml_classifier_org"
+  },
+  "mixed_high_null.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "mixed",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "mixed_hr_vendor.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "mixed",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "mixed_minimal_1row.csv": {
+    "effective_mode": "company",
+    "dataset_type": "COMPANY",
+    "routing_decision": "ml_classifier_org",
+    "category": "mixed",
+    "expected_effective_mode": "company",
+    "expected_dataset_type": "COMPANY",
+    "expected_routing_decision": "ml_classifier_org"
+  },
+  "mixed_minimal_3row.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "mixed",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "mixed_misleading_headers.csv": {
+    "effective_mode": "company",
+    "dataset_type": "COMPANY",
+    "routing_decision": "ml_classifier_org",
+    "category": "mixed",
+    "expected_effective_mode": "company",
+    "expected_dataset_type": "COMPANY",
+    "expected_routing_decision": "ml_classifier_org"
+  },
+  "mixed_multilingual.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "mixed",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "mixed_no_header.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "mixed",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "mixed_person_and_org.csv": {
+    "effective_mode": "company",
+    "dataset_type": "COMPANY",
+    "routing_decision": "company_dataset",
+    "category": "mixed",
+    "expected_effective_mode": "company",
+    "expected_dataset_type": "COMPANY",
+    "expected_routing_decision": "company_dataset"
+  },
+  "mixed_quoted_fields.csv": {
+    "effective_mode": "company",
+    "dataset_type": "COMPANY",
+    "routing_decision": "ml_classifier_org",
+    "category": "mixed",
+    "expected_effective_mode": "company",
+    "expected_dataset_type": "COMPANY",
+    "expected_routing_decision": "ml_classifier_org"
+  },
+  "mixed_semicolon_delimited.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "mixed",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "mixed_unicode_headers.csv": {
+    "effective_mode": "company",
+    "dataset_type": "COMPANY",
+    "routing_decision": "ml_classifier_org",
+    "category": "mixed",
+    "expected_effective_mode": "company",
+    "expected_dataset_type": "COMPANY",
+    "expected_routing_decision": "ml_classifier_org"
+  },
+  "mixed_very_wide.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "mixed",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "mixed_wide_csv.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "mixed",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "org_abbreviated.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "org",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "org_asian.csv": {
+    "effective_mode": "company",
+    "dataset_type": "COMPANY",
+    "routing_decision": "ml_classifier_org",
+    "category": "org",
+    "expected_effective_mode": "company",
+    "expected_dataset_type": "COMPANY",
+    "expected_routing_decision": "ml_classifier_org"
+  },
+  "org_dba_names.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "org",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "org_european.csv": {
+    "effective_mode": "company",
+    "dataset_type": "COMPANY",
+    "routing_decision": "ml_classifier_org",
+    "category": "org",
+    "expected_effective_mode": "company",
+    "expected_dataset_type": "COMPANY",
+    "expected_routing_decision": "ml_classifier_org"
+  },
+  "org_financial.csv": {
+    "effective_mode": "company",
+    "dataset_type": "COMPANY",
+    "routing_decision": "ml_classifier_org",
+    "category": "org",
+    "expected_effective_mode": "company",
+    "expected_dataset_type": "COMPANY",
+    "expected_routing_decision": "ml_classifier_org"
+  },
+  "org_financial_institutions.csv": {
+    "effective_mode": "company",
+    "dataset_type": "COMPANY",
+    "routing_decision": "company_dataset",
+    "category": "org",
+    "expected_effective_mode": "company",
+    "expected_dataset_type": "COMPANY",
+    "expected_routing_decision": "company_dataset"
+  },
+  "org_government.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "org",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "org_holding_structures.csv": {
+    "effective_mode": "company",
+    "dataset_type": "COMPANY",
+    "routing_decision": "company_dataset",
+    "category": "org",
+    "expected_effective_mode": "company",
+    "expected_dataset_type": "COMPANY",
+    "expected_routing_decision": "company_dataset"
+  },
+  "org_intl_companies.csv": {
+    "effective_mode": "company",
+    "dataset_type": "COMPANY",
+    "routing_decision": "company_dataset",
+    "category": "org",
+    "expected_effective_mode": "company",
+    "expected_dataset_type": "COMPANY",
+    "expected_routing_decision": "company_dataset"
+  },
+  "org_latin_american.csv": {
+    "effective_mode": "company",
+    "dataset_type": "COMPANY",
+    "routing_decision": "ml_classifier_org",
+    "category": "org",
+    "expected_effective_mode": "company",
+    "expected_dataset_type": "COMPANY",
+    "expected_routing_decision": "ml_classifier_org"
+  },
+  "org_long_names.csv": {
+    "effective_mode": "company",
+    "dataset_type": "COMPANY",
+    "routing_decision": "company_dataset",
+    "category": "org",
+    "expected_effective_mode": "company",
+    "expected_dataset_type": "COMPANY",
+    "expected_routing_decision": "company_dataset"
+  },
+  "org_mixed_case.csv": {
+    "effective_mode": "company",
+    "dataset_type": "COMPANY",
+    "routing_decision": "company_dataset",
+    "category": "org",
+    "expected_effective_mode": "company",
+    "expected_dataset_type": "COMPANY",
+    "expected_routing_decision": "company_dataset"
+  },
+  "org_no_suffix.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "org",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "org_nonprofits.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "org",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "org_ocr_damaged.csv": {
+    "effective_mode": "company",
+    "dataset_type": "COMPANY",
+    "routing_decision": "ml_classifier_org",
+    "category": "org",
+    "expected_effective_mode": "company",
+    "expected_dataset_type": "COMPANY",
+    "expected_routing_decision": "ml_classifier_org"
+  },
+  "org_tech_startups.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "org",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "org_us_companies.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "org",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "org_vessels.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "org",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "org_with_person_names.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "org",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "person_abbreviated.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "person",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "person_all_caps.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "person",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "person_arabic_latin.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "person",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "person_english.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "PERSON",
+    "routing_decision": "person_dataset",
+    "category": "person",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "PERSON",
+    "expected_routing_decision": "person_dataset"
+  },
+  "person_german.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "person",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "person_hyphenated.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "person",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "person_japanese_romaji.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "person",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "person_mixed_intl.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "PERSON",
+    "routing_decision": "person_dataset",
+    "category": "person",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "PERSON",
+    "expected_routing_decision": "person_dataset"
+  },
+  "person_mixed_scripts.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "person",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "person_noisy_whitespace.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "person",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "person_ocr_noise.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "person",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "person_patronymic.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "person",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "person_portuguese.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "person",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "person_reversed.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "person",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "person_single_names.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "person",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "person_spanish.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "PERSON",
+    "routing_decision": "person_dataset",
+    "category": "person",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "PERSON",
+    "expected_routing_decision": "person_dataset"
+  },
+  "person_titled.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "person",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "person_with_ids.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "person",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  },
+  "person_with_titles_mixed.csv": {
+    "effective_mode": "mixed",
+    "dataset_type": "MIXED",
+    "routing_decision": "mixed_dataset",
+    "category": "person",
+    "expected_effective_mode": "mixed",
+    "expected_dataset_type": "MIXED",
+    "expected_routing_decision": "mixed_dataset"
+  }
+}

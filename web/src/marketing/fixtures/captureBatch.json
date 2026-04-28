@@ -1,0 +1,41 @@
+{
+  "trace_id": "BATCH-A7F2E9C1",
+  "status": "completed",
+  "created_at": "2026-02-17T14:32:18Z",
+  "completed_at": "2026-02-17T14:45:22Z",
+  "duration_seconds": 784,
+  "total_rows": 47832,
+  "counts": {
+    "l0_garbage": 156,
+    "l1_deterministic": 32089,
+    "l2_vector": 11958,
+    "l3_llm": 2688,
+    "l4_human": 941
+  },
+  "percentages": {
+    "l0": 0.3,
+    "l1": 67.1,
+    "l2": 25.0,
+    "l3": 5.6,
+    "l4": 2.0
+  },
+  "signature": {
+    "valid": true,
+    "algorithm": "ECDSA_P256",
+    "key_version": "1"
+  },
+  "hash_chain": {
+    "valid": true,
+    "algorithm": "SHA256",
+    "record_count": 47832
+  },
+  "anchor": {
+    "status": "CONFIRMED",
+    "timestamp": "2026-02-17T14:45:23Z"
+  },
+  "retention": {
+    "years": 7,
+    "policy": "WORM",
+    "expires_at": "2033-02-17T14:45:22Z"
+  }
+}

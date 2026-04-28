@@ -1,0 +1,31 @@
+{
+  "trace_id": "BATCH-A7F2E9C1",
+  "verification_status": "VERIFIED",
+  "verified_at": "2026-02-17T15:02:33Z",
+  "checks": [
+    {
+      "name": "Hash Chain",
+      "status": "VALID",
+      "detail": "All 47,832 records linked",
+      "sub_detail": "No breaks detected"
+    },
+    {
+      "name": "Digital Signature",
+      "status": "VALID",
+      "detail": "ECDSA P-256",
+      "sub_detail": "Cloud KMS verified"
+    },
+    {
+      "name": "External Anchor",
+      "status": "CONFIRMED",
+      "detail": "GCS immutable storage",
+      "sub_detail": "Write timestamp confirmed"
+    }
+  ],
+  "privacy_note": "Public verification confirms integrity without exposing underlying data.",
+  "metadata": {
+    "record_count": 47832,
+    "anchor_timestamp": "2026-02-17T14:45:23Z",
+    "retention_policy": "7 Years WORM"
+  }
+}

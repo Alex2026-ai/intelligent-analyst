@@ -1,0 +1,11 @@
+Input,Source,Status
+' DROP TABLE users --,Form,Blocked
+1 OR 1=1,Query,Blocked
+admin' --,Login,Blocked
+1 DELETE FROM records --,API,Blocked
+UNION SELECT * FROM passwords,Search,Blocked
+' INSERT INTO admin VALUES (hacker)--,Upload,Blocked
+1' AND '1'='1,Field,Blocked
+' OR ''=',Login,Blocked
+' UPDATE users SET role=admin--,Form,Blocked
+1 AND SLEEP(5)--,Search,Blocked

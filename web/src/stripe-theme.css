@@ -1,0 +1,282 @@
+/* ===== Stripe-Inspired Design System ===== */
+/* Clean, confident, institutional */
+
+:root {
+  /* Light mode palette */
+  --stripe-bg: #ffffff;
+  --stripe-surface: #f6f9fc;
+  --stripe-surface-dark: #e3e8ee;
+  --stripe-border: #e3e8ee;
+  --stripe-border-light: #f0f3f7;
+
+  /* Text colors */
+  --stripe-text: #0a2540;
+  --stripe-text-secondary: #425466;
+  --stripe-text-muted: #6b7c93;
+
+  /* Accent - sophisticated blue (like Stripe's purple, but blue for trust) */
+  --stripe-accent: #0073e6;
+  --stripe-accent-light: #e8f4fd;
+  --stripe-accent-dark: #005bb5;
+
+  /* Success/Status */
+  --stripe-success: #00d4aa;
+  --stripe-success-bg: #e6faf5;
+
+  /* Shadows */
+  --stripe-shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --stripe-shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --stripe-shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
+  --stripe-shadow-hover: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+/* ===== Base Styles ===== */
+html, body {
+  background-color: var(--stripe-bg);
+  color: var(--stripe-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Typography ===== */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--stripe-text);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* ===== Rounded Corners (Stripe style) ===== */
+.stripe-card {
+  border-radius: 12px;
+  background: var(--stripe-bg);
+  border: 1px solid var(--stripe-border);
+  box-shadow: var(--stripe-shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.stripe-card:hover {
+  box-shadow: var(--stripe-shadow-hover);
+  transform: translateY(-2px);
+}
+
+/* ===== Buttons ===== */
+.stripe-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  background: var(--stripe-accent);
+  color: white;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.stripe-btn-primary:hover {
+  background: var(--stripe-accent-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 115, 230, 0.4);
+}
+
+.stripe-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  background: transparent;
+  color: var(--stripe-text);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: 8px;
+  border: 1px solid var(--stripe-border);
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.stripe-btn-secondary:hover {
+  background: var(--stripe-surface);
+  border-color: var(--stripe-text-muted);
+}
+
+/* ===== Navigation ===== */
+.stripe-nav {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--stripe-border);
+}
+
+.stripe-nav-link {
+  color: var(--stripe-text-secondary);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  transition: color 0.15s ease;
+}
+
+.stripe-nav-link:hover {
+  color: var(--stripe-text);
+}
+
+/* ===== Badges ===== */
+.stripe-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.75rem;
+  background: var(--stripe-accent-light);
+  color: var(--stripe-accent);
+  font-weight: 500;
+  font-size: 0.8125rem;
+  border-radius: 100px;
+}
+
+/* ===== Feature Cards ===== */
+.stripe-feature-card {
+  padding: 2rem;
+  background: var(--stripe-bg);
+  border: 1px solid var(--stripe-border);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.stripe-feature-card:hover {
+  border-color: var(--stripe-accent);
+  box-shadow: var(--stripe-shadow-md);
+}
+
+/* ===== Section Styling ===== */
+.stripe-section {
+  padding: 6rem 0;
+}
+
+.stripe-section-alt {
+  background: var(--stripe-surface);
+}
+
+/* ===== Code/Technical Display ===== */
+.stripe-code {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+  font-size: 0.875rem;
+  background: var(--stripe-surface);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--stripe-border);
+  color: var(--stripe-text);
+}
+
+/* ===== Trust Indicators ===== */
+.stripe-trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--stripe-success-bg);
+  color: #0d7d6a;
+  font-weight: 500;
+  font-size: 0.8125rem;
+  border-radius: 6px;
+}
+
+/* ===== Gradient Accents (Stripe signature) ===== */
+.stripe-gradient-text {
+  background: linear-gradient(135deg, #0073e6 0%, #00d4aa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stripe-gradient-bg {
+  background: linear-gradient(135deg, rgba(0, 115, 230, 0.05) 0%, rgba(0, 212, 170, 0.05) 100%);
+}
+
+/* ===== Input Fields ===== */
+.stripe-input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background: var(--stripe-bg);
+  border: 1px solid var(--stripe-border);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--stripe-text);
+  transition: all 0.15s ease;
+}
+
+.stripe-input:focus {
+  outline: none;
+  border-color: var(--stripe-accent);
+  box-shadow: 0 0 0 3px var(--stripe-accent-light);
+}
+
+.stripe-input::placeholder {
+  color: var(--stripe-text-muted);
+}
+
+/* ===== List Items ===== */
+.stripe-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+}
+
+.stripe-list-check {
+  width: 20px;
+  height: 20px;
+  background: var(--stripe-success-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.stripe-list-check svg {
+  width: 12px;
+  height: 12px;
+  color: var(--stripe-success);
+}
+
+/* ===== Footer ===== */
+.stripe-footer {
+  background: var(--stripe-text);
+  color: white;
+  padding: 4rem 0 2rem;
+}
+
+.stripe-footer a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.15s ease;
+}
+
+.stripe-footer a:hover {
+  color: white;
+}
+
+/* ===== Animations ===== */
+@keyframes stripe-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stripe-animate-in {
+  animation: stripe-fade-in 0.6s ease forwards;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .stripe-section {
+    padding: 4rem 0;
+  }
+}

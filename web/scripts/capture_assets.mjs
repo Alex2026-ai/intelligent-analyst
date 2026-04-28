@@ -1,0 +1,154 @@
+#!/usr/bin/env node
+
+/**
+ * Marketing Asset Renderer
+ *
+ * Uses Playwright to capture real UI components as WebP/PNG assets.
+ * Run with: npm run marketing:capture
+ */
+
+import { chromium } from 'playwright';
+import sharp from 'sharp';
+import { spawn } from 'child_process';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import fs from 'fs/promises';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const WEB_DIR = path.resolve(__dirname, '..');
+const OUTPUT_DIR = path.join(WEB_DIR, 'public', 'img');
+
+const CAPTURES = [
+  {
+    name: 'dashboard-batch-overview',
+    route: '/__capture/batch',
+    viewport: { width: 900, height: 600 },
+  },
+  {
+    name: 'forensic-receipt',
+    route: '/__capture/receipt',
+    viewport: { width: 900, height: 500 },
+  },
+  {
+    name: 'public-verify',
+    route: '/__capture/verify',
+    viewport: { width: 700, height: 600 },
+  },
+];
+
+const DEV_PORT = 5199;
+const DEV_URL = `http://localhost:${DEV_PORT}`;
+
+async function startDevServer() {
+  console.log('Starting Vite dev server...');
+
+  const viteProcess = spawn('npm', ['run', 'dev', '--', '--port', String(DEV_PORT)], {
+    cwd: WEB_DIR,
+    stdio: ['ignore', 'pipe', 'pipe'],
+    shell: true,
+  });
+
+  return new Promise((resolve, reject) => {
+    let output = '';
+
+    const timeout = setTimeout(() => {
+      viteProcess.kill();
+      reject(new Error('Dev server startup timed out'));
+    }, 60000);
+
+    const checkReady = (data) => {
+      output += data.toString();
+      if (output.includes('Local:') || output.includes('ready in') || output.includes('localhost:' + DEV_PORT)) {
+        clearTimeout(timeout);
+        console.log('Dev server ready');
+        resolve(viteProcess);
+      }
+    };
+
+    viteProcess.stdout.on('data', checkReady);
+    viteProcess.stderr.on('data', checkReady);
+
+    viteProcess.on('error', (err) => {
+      clearTimeout(timeout);
+      reject(err);
+    });
+  });
+}
+
+async function captureScreenshots(browser) {
+  const context = await browser.newContext({
+    viewport: { width: 1600, height: 900 },
+    deviceScaleFactor: 2,
+    colorScheme: 'dark',
+  });
+
+  const page = await context.newPage();
+
+  await fs.mkdir(OUTPUT_DIR, { recursive: true });
+
+  for (const capture of CAPTURES) {
+    console.log(`Capturing: ${capture.name}`);
+
+    await page.setViewportSize(capture.viewport);
+
+    await page.goto(`${DEV_URL}${capture.route}`, {
+      waitUntil: 'networkidle',
+    });
+
+    // Wait for fonts and rendering
+    await page.waitForTimeout(1000);
+
+    const container = await page.$('#capture-container');
+    if (!container) {
+      console.error(`  Container not found for ${capture.name}`);
+      continue;
+    }
+
+    // Capture PNG
+    const pngPath = path.join(OUTPUT_DIR, `${capture.name}.png`);
+    const pngBuffer = await container.screenshot({
+      type: 'png',
+      omitBackground: false,
+    });
+    await fs.writeFile(pngPath, pngBuffer);
+    console.log(`  Saved: ${capture.name}.png`);
+
+    // Convert to WebP
+    const webpPath = path.join(OUTPUT_DIR, `${capture.name}.webp`);
+    await sharp(pngBuffer)
+      .webp({ quality: 90 })
+      .toFile(webpPath);
+    console.log(`  Saved: ${capture.name}.webp`);
+  }
+
+  await context.close();
+}
+
+async function main() {
+  let viteProcess = null;
+  let browser = null;
+
+  try {
+    viteProcess = await startDevServer();
+
+    // Give server time to fully stabilize
+    await new Promise((r) => setTimeout(r, 3000));
+
+    console.log('Launching Playwright browser...');
+    browser = await chromium.launch({ headless: true });
+
+    await captureScreenshots(browser);
+
+    console.log('\n✓ All marketing assets generated successfully');
+    console.log(`  Output: ${OUTPUT_DIR}`);
+
+  } catch (error) {
+    console.error('Error:', error.message);
+    process.exit(1);
+  } finally {
+    if (browser) await browser.close();
+    if (viteProcess) viteProcess.kill();
+  }
+}
+
+main();

@@ -1,0 +1,11 @@
+Text,Category,Issue
+normaltext,ZeroWidth,Hidden Char
+RTLInjection,RTL Override,Direction
+emoji test,ZWJ Sequence,Hidden
+testArabic,Arabic Mark,Hidden
+pure noise,Mixed Marks,Noise
+textwith,Emoji,Non-Name
+testBOM,BOM,Encoding
+textcontent,Invalid,Bad Char
+line1line2,Line Sep,Separator
+paragraph,Para Sep,Separator

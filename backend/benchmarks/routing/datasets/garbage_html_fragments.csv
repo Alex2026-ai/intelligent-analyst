@@ -1,0 +1,11 @@
+Content,Type,Detected
+<script>alert(xss)</script>,HTML,Yes
+<img src=x onerror=alert(1)>,HTML,Yes
+</div><div onclick=alert(1)>,HTML,Yes
+.class { display: none; },CSS,Yes
+<style>body { background: red; }</style>,HTML,Yes
+<iframe src=evil.com></iframe>,HTML,Yes
+function() { return hack(); },JS,Yes
+<meta http-equiv=refresh>,HTML,Yes
+<![CDATA[stuff]]>,HTML,Yes
+<link rel=stylesheet href=fake.css>,HTML,Yes

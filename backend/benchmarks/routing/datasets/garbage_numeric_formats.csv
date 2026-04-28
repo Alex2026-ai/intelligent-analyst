@@ -1,0 +1,11 @@
+Value,Format,Type
+(555) 123-4567,Phone,US
+555-123-4567,Phone,US
+123-45-6789,SSN,US
+12345-6789,Zip Code,US
+90210,Zip Code,US
+0191 234 5678,Phone,UK
++44 20 7946 0958,Phone,UK
+33 1 42 34 56 00,Phone,France
+987654321098765,Credit Card,Generic
+3782 822463 10005,AMEX Card,Generic

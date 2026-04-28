@@ -1,0 +1,6 @@
+FirstName,LastName,Email,Phone,Company,JobTitle,City,State,Country,Source
+Francisco,Perez,fp@example.com,555-1234,Acme Corp,Manager,Madrid,Madrid,Spain,LinkedIn
+Maria,Garcia,mg@example.com,555-5678,Global Tech,Director,Barcelona,Barcelona,Spain,Referral
+Juan,Martinez,jm@example.com,555-9012,Innovation Labs,Engineer,Valencia,Valencia,Spain,Website
+Rosa,Lopez,rl@example.com,555-3456,Digital First,Analyst,Seville,Seville,Spain,Event
+Manuel,Gonzalez,mg2@example.com,555-7890,Future Systems,VP,Bilbao,Bilbao,Spain,Cold Call

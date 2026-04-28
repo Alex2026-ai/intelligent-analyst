@@ -1,0 +1,11 @@
+Text,Char_Count,Meaning
+aaaa,4,Junk
+xxxx,4,Junk
+0000,4,Junk
+9999,4,Junk
+.....,5,Ellipsis
+-----,5,Separator
+=====,5,Separator
+oooooo,6,Junk
+llllllll,8,Junk
+iiiiii,6,Junk

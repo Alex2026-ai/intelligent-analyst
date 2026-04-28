@@ -1,0 +1,110 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+.env
+*.egg-info/
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+diag_logs.json
+
+# Test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+web/playwright-report/
+web/test-results/
+web/tests/screenshots/
+web/tests/*-snapshots/
+
+# Node (if frontend uses npm)
+node_modules/
+.next/
+out/
+.vercel
+
+# Environment
+.env
+.env.local
+.env.*.local
+web/.env.demo
+web/.env.test
+web/.env.prod
+web/.env.*
+!web/.env.*.example
+
+# Secrets - NEVER COMMIT
+*secret*
+*credentials*
+*.pem
+*.key
+users.json
+service-account*.json
+*-service-account.json
+
+# Large files
+*.csv
+!data/golden_demo_1000.csv
+!backend/benchmarks/**/*.csv
+!backend/tests/data/**/*.csv
+*.xlsx
+!data/quick_50.xlsx
+
+# Public release exclusions
+infra_snapshots/
+internal/
+forensics/
+verification_pack/
+backend/_archive/
+backend/calibration/
+backend/data/calibration_results/
+backend/data/*.xml
+backend/data/labeled_samples.csv
+demo_data/
+.firebaserc
+firebase.json
+firebase.*.json
+!firebase.example.json
+cloudbuild*.yaml
+*trigger-config.yaml
+
+# Temp
+tmp/
+temp/
+*.tmp
+web/.vite/
+Procfile
+
+# Firebase build artifacts
+.firebase/
+
+# Local env overrides
+.env.local
+.env.*.local
+
+# Operator-only deployment artifacts
+backend/deploy*.sh
+scripts/*deploy*
+scripts/*preflight*
+tools/stress_stability*

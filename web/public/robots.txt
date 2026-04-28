@@ -1,0 +1,42 @@
+# Intelligent Analyst - robots.txt
+# https://intelligentanalyst.com
+
+User-agent: *
+Allow: /
+
+# Marketing pages
+Allow: /product
+Allow: /platform
+Allow: /security
+Allow: /trust-architecture
+Allow: /company
+Allow: /resources
+Allow: /request-demo
+Allow: /transparency-manifesto
+
+# Use case pages
+Allow: /use-cases/
+
+# Legal pages
+Allow: /privacy
+Allow: /terms
+Allow: /dpa
+
+# Authority pages (protocol, evidence, glossary)
+Allow: /protocol/
+Allow: /verify
+Allow: /compliance
+Allow: /trust-feed
+Allow: /samples/
+Allow: /glossary
+
+# Disallow internal/app routes
+Disallow: /app/
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /preview
+Disallow: /s/
+Disallow: /__capture/
+
+# Sitemap
+Sitemap: https://intelligentanalyst.com/sitemap.xml

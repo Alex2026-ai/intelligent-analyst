@@ -1,0 +1,17 @@
+# Intelligent Analyst Worker — production dependencies
+
+# Google Cloud
+google-cloud-firestore>=2.16.0
+google-cloud-storage>=2.14.0
+
+# Export / PDF
+reportlab>=4.0.0
+openpyxl>=3.1.0
+
+# Observability
+opentelemetry-api>=1.20.0
+opentelemetry-sdk>=1.20.0
+structlog>=23.1.0
+
+# Shared types
+pydantic>=2.0,<3.0

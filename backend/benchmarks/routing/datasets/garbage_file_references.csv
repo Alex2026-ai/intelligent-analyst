@@ -1,0 +1,11 @@
+Reference,Type,Category
+/etc/passwd,Unix Path,System
+C:\Windows\System32\config,Windows Path,System
+../../etc/hosts,Relative Path,System
+file:///home/user/data,File URI,System
+/var/log/apache2/access.log,Log File,System
+~/Documents/secret.txt,Home Path,Personal
+./build/output.bin,Build Path,Project
+/proc/self/environ,Proc Path,System
+\\network\share\file,UNC Path,Network
+/dev/null,Device,System
