@@ -28,6 +28,8 @@ assertFile(join(distDir, 'index.html'), 'SPA entry');
 assertFile(join(distDir, 'favicon.svg'), 'favicon');
 assertFile(join(distDir, 'og-image.png'), 'Open Graph image');
 assertFile(join(distDir, 'apple-touch-icon.png'), 'Apple touch icon');
+assertFile(join(distDir, 'samples', 'sample_suppliers_public_demo.csv'), 'dashboard sample CSV');
+assertFile(join(distDir, 'samples', 'sample-acme-batch.csv'), 'marketing sample CSV');
 
 let bundle = '';
 let previewBundle = '';
@@ -52,6 +54,7 @@ if (!existsSync(assetsDir)) {
 const requiredText = [
   'Interactive Public Demo',
   'Run Sample Upload',
+  'Download Sample CSV',
   'Download Sample Evidence Pack',
   'No backend calls',
   'Sample evidence pack downloaded',

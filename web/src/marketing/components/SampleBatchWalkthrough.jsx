@@ -70,7 +70,7 @@ export default function SampleBatchWalkthrough() {
                 sample-acme-batch.csv
               </div>
               <div className="text-xs text-slate-500 mb-4">
-                10 entity records • 847 bytes
+                10 entity records • sample CSV
               </div>
               <a
                 href="/samples/sample-acme-batch.csv"

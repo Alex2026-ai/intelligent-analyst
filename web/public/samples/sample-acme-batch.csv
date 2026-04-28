@@ -1,0 +1,11 @@
+record_id,entity_name,country,source_system
+TRC-001,GOOGL,US,Demo Batch
+TRC-002,Google,US,Demo Batch
+TRC-003,MSFT,US,Demo Batch
+TRC-004,Microsoft Corp,US,Demo Batch
+TRC-005,AAPL,US,Demo Batch
+TRC-006,Facebook Inc,US,Demo Batch
+TRC-007,Tesla Motors,US,Demo Batch
+TRC-008,AWS,US,Demo Batch
+TRC-009,Alphabet Holdings,US,Demo Batch
+TRC-010,Tech Giant Inc,US,Demo Batch

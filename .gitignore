@@ -68,6 +68,8 @@ service-account*.json
 !data/golden_demo_1000.csv
 !backend/benchmarks/**/*.csv
 !backend/tests/data/**/*.csv
+!web/public/samples/sample-acme-batch.csv
+!web/public/samples/sample_suppliers_public_demo.csv
 *.xlsx
 !data/quick_50.xlsx
 

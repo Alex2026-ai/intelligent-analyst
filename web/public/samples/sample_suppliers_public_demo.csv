@@ -1,0 +1,26 @@
+record_id,vendor_name,country,source_system,submitted_identifier,spend_category
+SUP-001,Apple Inc,US,ERP,DEMO-APPLE-001,Technology
+SUP-002,NVIDIA Corporation,US,ERP,DEMO-NVIDIA-002,Technology
+SUP-003,"Oracle America, Inc.",US,Procurement,DEMO-ORACLE-003,Software
+SUP-004,Adobe Inc.,US,ERP,DEMO-ADOBE-004,Software
+SUP-005,"Cisco Systems, Inc.",US,Procurement,DEMO-CISCO-005,Network Equipment
+SUP-006,Intel Corporation,US,ERP,DEMO-INTEL-006,Hardware
+SUP-007,Dell Technologies Inc.,US,ERP,DEMO-DELL-007,Hardware
+SUP-008,IBM Corporation,US,Procurement,DEMO-IBM-008,Services
+SUP-009,"ServiceNow, Inc.",US,ERP,DEMO-SNOW-009,Software
+SUP-010,"Workday, Inc.",US,Procurement,DEMO-WDAY-010,Software
+SUP-011,Snowflake Inc.,US,ERP,DEMO-SNOWFLAKE-011,Cloud Data
+SUP-012,"CrowdStrike Holdings, Inc.",US,Security,DEMO-CRWD-012,Security
+SUP-013,"Datadog, Inc.",US,Security,DEMO-DDOG-013,Observability
+SUP-014,Atlassian Corporation,AU,Procurement,DEMO-TEAM-014,Software
+SUP-015,Microsoft Corp.,US,ERP,DEMO-MSFT-015,Software
+SUP-016,Meta Platforms LLC,US,Marketing,DEMO-META-016,Advertising
+SUP-017,Tesla Motors,US,Fleet,DEMO-TSLA-017,Fleet
+SUP-018,Salesforce.com Inc,US,CRM,DEMO-CRM-018,Software
+SUP-019,Global Freight Partners,US,Logistics,DEMO-GFP-019,Logistics
+SUP-020,Blue River Packaging,US,Procurement,DEMO-BRP-020,Packaging
+SUP-021,Acme Industrial Supply LLC,US,Plant Ops,DEMO-ACME-021,Industrial Supplies
+SUP-022,Northstar Components,CA,Plant Ops,DEMO-NORTHSTAR-022,Components
+SUP-023,AWS Marketplace,US,Cloud,DEMO-AWS-023,Cloud Services
+SUP-024,SAP America,US,ERP,DEMO-SAP-024,Software
+SUP-025,Unknown Vendor 4421,US,Manual Intake,DEMO-UNKNOWN-025,Unclassified

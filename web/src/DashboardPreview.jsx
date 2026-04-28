@@ -13,6 +13,11 @@ import {
 } from 'lucide-react';
 import AuditLog from './views/AuditLog';
 import AnalysisHome from './views/AnalysisHome';
+import {
+  sampleSupplierCsv,
+  sampleSupplierInputRows,
+  sampleSupplierResolutions,
+} from './fixtures/publicSampleDataset';
 
 // Mock batch data
 const mockBatches = [
@@ -58,6 +63,7 @@ const sampleUploadBatch = {
     layer_1_norm: 6,
     layer_2_vector: 4,
     layer_3_llm: 0,
+    layer_4_review: 1,
   },
   transparency_statement: {
     template_id: 'TLS_PUBLIC_PREVIEW_v1',
@@ -78,13 +84,7 @@ const sampleUploadBatch = {
   },
 };
 
-const sampleRecords = [
-  { input: 'Apple Inc', resolved: 'Apple Inc.', layer: 'L1 deterministic', confidence: 1 },
-  { input: 'Microsoft Corp.', resolved: 'Microsoft Corporation', layer: 'L1 deterministic', confidence: 1 },
-  { input: 'Acme Industrial Supply LLC', resolved: 'Acme Industrial Supply, LLC', layer: 'L2 vector fuzzy', confidence: 0.94 },
-  { input: 'Northstar Components', resolved: 'Northstar Components', layer: 'L2 vector fuzzy', confidence: 0.91 },
-  { input: 'Unknown Vendor 4421', resolved: 'Human review required', layer: 'L4 review', confidence: 0.62 },
-];
+const sampleRecords = sampleSupplierResolutions;
 
 const buildEvidencePack = (batch) => ({
   manifest: {
@@ -93,7 +93,8 @@ const buildEvidencePack = (batch) => ({
     generated_at: '2026-04-27T12:00:05Z',
     trace_id: batch.trace_id,
     source_file: batch.filename,
-    notice: 'This evidence pack is generated from bundled public preview data. It contains no customer data and makes no backend calls.',
+    row_count: batch.total,
+    notice: 'This evidence pack is generated from the bundled 25-row public preview dataset. It contains no customer data and makes no backend calls.',
   },
   summary: {
     status: batch.status,
@@ -119,6 +120,7 @@ const buildEvidencePack = (batch) => ({
     { timestamp: batch.timestamp, actor: 'service', action: 'layer_executed', target: batch.trace_id, result: 'success' },
     { timestamp: batch.timestamp, actor: 'service', action: 'evidence_generated', target: batch.trace_id, result: 'success' },
   ],
+  sample_inputs: sampleSupplierInputRows,
   sample_resolutions: sampleRecords,
 });
 
@@ -200,7 +202,7 @@ export default function DashboardPreview() {
     ]);
     setSelectedBatch(sampleUploadBatch);
     setActiveTab('history');
-    showNotice('Sample upload processed locally. No file was uploaded.');
+    showNotice('Processed 25 bundled sample rows locally. No file was uploaded.');
   };
 
   const refreshSampleData = () => {
@@ -215,15 +217,18 @@ export default function DashboardPreview() {
     zip.file('summary.json', JSON.stringify(pack.summary, null, 2));
     zip.file('deterministic-replay.json', JSON.stringify(pack.deterministic_replay, null, 2));
     zip.file('audit-trail.json', JSON.stringify(pack.audit_trail, null, 2));
+    zip.file('source-sample.csv', sampleSupplierCsv);
+    zip.file('sample-inputs.json', JSON.stringify(pack.sample_inputs, null, 2));
     zip.file('sample-resolutions.json', JSON.stringify(pack.sample_resolutions, null, 2));
     zip.file('README.txt', [
       'Intelligent Analyst public preview evidence pack',
       '',
-      'This ZIP is generated locally from bundled sample data.',
+      'This ZIP is generated locally from the bundled 25-row sample dataset.',
       'It is intended to show the shape of an audit artifact without exposing customer data.',
       '',
       `Trace ID: ${batch.trace_id}`,
       `Source file: ${batch.filename}`,
+      `Rows: ${batch.total}`,
     ].join('\n'));
 
     const blob = await zip.generateAsync({ type: 'blob' });
@@ -336,14 +341,24 @@ export default function DashboardPreview() {
                     <p className="text-slate-400 leading-relaxed mb-6">
                       This simulates a CSV upload, runs the sample through the demo waterfall, and opens the generated batch in History.
                     </p>
-                    <button
-                      type="button"
-                      onClick={runSampleUpload}
-                      className="inline-flex items-center gap-2 px-5 py-3 bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 hover:bg-cyan-500/20 transition-colors text-xs font-mono uppercase tracking-wider"
-                    >
-                      <PlayCircle size={16} />
-                      Run Sample Upload
-                    </button>
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <button
+                        type="button"
+                        onClick={runSampleUpload}
+                        className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 hover:bg-cyan-500/20 transition-colors text-xs font-mono uppercase tracking-wider"
+                      >
+                        <PlayCircle size={16} />
+                        Run Sample Upload
+                      </button>
+                      <a
+                        href="/samples/sample_suppliers_public_demo.csv"
+                        download
+                        className="inline-flex items-center justify-center gap-2 px-5 py-3 text-slate-300 border border-slate-700 hover:border-cyan-500/50 hover:text-white transition-colors text-xs font-mono uppercase tracking-wider"
+                      >
+                        <Download size={16} />
+                        Download Sample CSV
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -363,10 +378,11 @@ export default function DashboardPreview() {
               <div className="p-4 border-b border-slate-800">
                 <h3 className="text-[10px] font-mono text-cyan-400 uppercase tracking-widest">Sample Rows</h3>
               </div>
-              <div className="overflow-x-auto">
+              <div className="max-h-[560px] overflow-auto">
                 <table className="w-full">
                   <thead>
                     <tr className="text-[10px] font-mono text-slate-500 uppercase tracking-wider border-b border-slate-800">
+                      <th className="text-left p-4">Record</th>
                       <th className="text-left p-4">Input</th>
                       <th className="text-left p-4">Result</th>
                       <th className="text-left p-4">Layer</th>
@@ -376,6 +392,7 @@ export default function DashboardPreview() {
                   <tbody>
                     {sampleRecords.map((record) => (
                       <tr key={`${record.input}-${record.layer}`} className="border-b border-slate-800/50">
+                        <td className="p-4 text-slate-500 text-xs font-mono">{record.record_id}</td>
                         <td className="p-4 text-slate-300 text-sm">{record.input}</td>
                         <td className="p-4 text-white text-sm">{record.resolved}</td>
                         <td className="p-4 text-cyan-400 text-xs font-mono uppercase">{record.layer}</td>
