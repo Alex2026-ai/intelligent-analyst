@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:pages": "npm run test:public && node ./scripts/prepare-github-pages.js",
     "preview": "vite preview",
     "test:public": "npm run build && node ./scripts/smoke-public-build.js",
     "test:visual": "playwright test",
