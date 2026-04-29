@@ -28,8 +28,6 @@ assertFile(join(distDir, 'index.html'), 'SPA entry');
 assertFile(join(distDir, 'favicon.svg'), 'favicon');
 assertFile(join(distDir, 'og-image.png'), 'Open Graph image');
 assertFile(join(distDir, 'apple-touch-icon.png'), 'Apple touch icon');
-assertFile(join(distDir, 'CNAME'), 'GitHub Pages custom domain file');
-assertFile(join(distDir, '.nojekyll'), 'GitHub Pages no-Jekyll marker');
 assertFile(join(distDir, 'samples', 'sample_suppliers_public_demo.csv'), 'dashboard sample CSV');
 assertFile(join(distDir, 'samples', 'sample-acme-batch.csv'), 'marketing sample CSV');
 

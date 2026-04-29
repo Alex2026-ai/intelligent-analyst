@@ -14,13 +14,12 @@ test.describe('Public Trust Feed', () => {
     await expect(page.locator('text=Public Trust Feed')).toBeVisible({ timeout: 10000 });
   });
 
-  test('empty feed shows graceful empty state', async ({ page }) => {
+  test('unavailable feed shows graceful public demo fallback', async ({ page }) => {
     await page.goto('/trust-feed');
-    // Either shows published samples or the empty state message
     const content = await page.textContent('body');
-    const hasEmptyState = content?.includes('No published authority samples yet');
-    const hasSamples = content?.includes('Verified');
-    expect(hasEmptyState || hasSamples).toBeTruthy();
+    expect(content).not.toContain('Unable to load trust feed');
+    expect(content).toContain('Public demo feed');
+    expect(content).toContain('Verified');
   });
 
   test('no tenant or private fields in DOM', async ({ page }) => {
