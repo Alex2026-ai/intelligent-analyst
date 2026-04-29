@@ -26,16 +26,16 @@ const LEGAL_CONTENT = {
       },
       {
         heading: 'GDPR (EU/EEA)',
-        body: 'For EU/EEA users: we act as a data processor for customer data and a data controller for website analytics. You have rights to access, rectify, erase, restrict processing, data portability, and object to processing. Contact privacy@intelligentanalyst.com to exercise these rights.',
+        body: 'For EU/EEA users: we act as a data processor for customer data and a data controller for website analytics. You have rights to access, rectify, erase, restrict processing, data portability, and object to processing. Contact info@intelligentanalyst.com to exercise these rights.',
       },
       {
         id: 'ccpa',
         heading: 'CCPA (California)',
-        body: 'For California residents: you have the right to know what personal information we collect, request deletion, and opt out of sale. We do not sell personal information. To exercise your rights, contact privacy@intelligentanalyst.com.',
+        body: 'For California residents: you have the right to know what personal information we collect, request deletion, and opt out of sale. We do not sell personal information. To exercise your rights, contact info@intelligentanalyst.com.',
       },
       {
         heading: 'Contact',
-        body: 'For privacy inquiries, contact privacy@intelligentanalyst.com. Intelligent Analyst, Inc., Delaware, USA.',
+        body: 'For privacy inquiries, contact info@intelligentanalyst.com. Intelligent Analyst, Inc., Delaware, USA.',
       },
     ],
   },
@@ -91,7 +91,7 @@ const LEGAL_CONTENT = {
       },
       {
         heading: 'Data Subject Rights',
-        body: 'We assist the customer in responding to data subject requests (access, rectification, erasure, portability). Requests should be directed to your account representative or privacy@intelligentanalyst.com.',
+        body: 'We assist the customer in responding to data subject requests (access, rectification, erasure, portability). Requests should be directed to your account representative or info@intelligentanalyst.com.',
       },
       {
         heading: 'International Transfers',
@@ -99,7 +99,7 @@ const LEGAL_CONTENT = {
       },
       {
         heading: 'Contact',
-        body: 'Data protection inquiries: privacy@intelligentanalyst.com. For EU-specific requests, our representative can be reached at the same address.',
+        body: 'Data protection inquiries: info@intelligentanalyst.com. For EU-specific requests, our representative can be reached at the same address.',
       },
     ],
   },
@@ -138,8 +138,8 @@ export default function LegalPage({ type }) {
           <div className="mt-16 pt-8 border-t border-slate-800">
             <p className="text-xs text-slate-600">
               Intelligent Analyst, Inc. &middot; Delaware, USA &middot;{' '}
-              <a href="mailto:legal@intelligentanalyst.com" className="text-cyan-600 hover:text-cyan-400">
-                legal@intelligentanalyst.com
+              <a href="mailto:info@intelligentanalyst.com" className="text-cyan-600 hover:text-cyan-400">
+                info@intelligentanalyst.com
               </a>
             </p>
           </div>

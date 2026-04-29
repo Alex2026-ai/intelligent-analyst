@@ -40,8 +40,8 @@ export default function Company() {
               <div className="space-y-3 text-sm text-slate-400">
                 <div className="flex items-center gap-2">
                   <Mail size={14} className="text-slate-500" />
-                  <a href="mailto:enterprise@intelligentanalyst.com" className="text-cyan-500 hover:text-cyan-400">
-                    enterprise@intelligentanalyst.com
+                  <a href="mailto:info@intelligentanalyst.com" className="text-cyan-500 hover:text-cyan-400">
+                    info@intelligentanalyst.com
                   </a>
                 </div>
                 <div className="flex items-center gap-2">

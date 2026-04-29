@@ -55,8 +55,8 @@ export default function Footer() {
               <div className="flex items-start gap-2 text-slate-400">
                 <Mail size={14} className="mt-1 text-slate-500" />
                 <div>
-                  <a href="mailto:enterprise@intelligentanalyst.com" className="hover:text-cyan-400 transition-colors">
-                    enterprise@intelligentanalyst.com
+                  <a href="mailto:info@intelligentanalyst.com" className="hover:text-cyan-400 transition-colors">
+                    info@intelligentanalyst.com
                   </a>
                 </div>
               </div>
@@ -253,18 +253,9 @@ export default function Footer() {
                 <p>Registered in Delaware, USA</p>
                 <p>
                   Email:{' '}
-                  <a href="mailto:legal@intelligentanalyst.com" className="text-cyan-500 hover:text-cyan-400">
-                    legal@intelligentanalyst.com
-                  </a>{' '}
-                  (Legal) |{' '}
-                  <a href="mailto:privacy@intelligentanalyst.com" className="text-cyan-500 hover:text-cyan-400">
-                    privacy@intelligentanalyst.com
-                  </a>{' '}
-                  (Privacy) |{' '}
-                  <a href="mailto:enterprise@intelligentanalyst.com" className="text-cyan-500 hover:text-cyan-400">
-                    enterprise@intelligentanalyst.com
-                  </a>{' '}
-                  (Sales)
+                  <a href="mailto:info@intelligentanalyst.com" className="text-cyan-500 hover:text-cyan-400">
+                    info@intelligentanalyst.com
+                  </a>
                 </p>
               </div>
             </div>

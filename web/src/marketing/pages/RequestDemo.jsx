@@ -47,12 +47,12 @@ export default function RequestDemo() {
             </div>
 
             <a
-              href="mailto:enterprise@intelligentanalyst.com?subject=Governance%20Audit%20Request"
+              href="mailto:info@intelligentanalyst.com?subject=Governance%20Audit%20Request"
               className="inline-flex w-full sm:w-auto items-center justify-center gap-3 min-h-14 px-6 sm:px-8 bg-cyan-600 text-white font-semibold hover:bg-cyan-500 transition-colors text-base sm:text-lg"
             >
               <Mail size={20} />
               <span className="sm:hidden">Email Enterprise</span>
-              <span className="hidden sm:inline">enterprise@intelligentanalyst.com</span>
+              <span className="hidden sm:inline">info@intelligentanalyst.com</span>
             </a>
 
             <p className="text-slate-500 text-sm mt-8">
