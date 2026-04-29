@@ -63,6 +63,7 @@ function App() {
           <Route path="/product" element={<Product />} />
           <Route path="/platform" element={<PlatformPage />} />
           <Route path="/security" element={<ForensicAudit />} />
+          <Route path="/forensic-audit" element={<ForensicAudit />} />
           <Route path="/trust-architecture" element={<TrustArchitecture />} />
           <Route path="/request-demo" element={<RequestDemo />} />
 

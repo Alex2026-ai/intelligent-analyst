@@ -73,7 +73,7 @@ export default function ForensicAuditEntry() {
           {/* CTA */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <Link
-              to="/forensic-audit"
+              to="/security"
               className="group inline-flex items-center gap-3 px-6 py-3 border transition-colors"
               style={{
                 borderColor: '#FFB800',

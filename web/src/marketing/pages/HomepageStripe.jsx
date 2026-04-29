@@ -649,7 +649,7 @@ export default function HomepageStripe() {
               <div className="space-y-3">
                 <Link to="/resources" className="block text-sm">Documentation</Link>
                 <Link to="/trust-architecture" className="block text-sm">Trust Architecture</Link>
-                <Link to="/forensic-audit" className="block text-sm">Forensic Audit</Link>
+                <Link to="/security" className="block text-sm">Forensic Audit</Link>
               </div>
             </div>
 

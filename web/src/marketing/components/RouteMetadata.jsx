@@ -27,6 +27,11 @@ const ROUTE_META = {
     description:
       'Reconstruct decision lineage with deterministic replay, signed receipts, hash chains, and examination-ready evidence.',
   },
+  '/forensic-audit': {
+    title: 'Forensic Audit | Intelligent Analyst',
+    description:
+      'Reconstruct decision lineage with deterministic replay, signed receipts, hash chains, and examination-ready evidence.',
+  },
   '/trust-architecture': {
     title: 'Trust Architecture | Intelligent Analyst',
     description:
